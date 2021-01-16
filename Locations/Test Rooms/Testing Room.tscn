@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Objects/NPCS/Neth.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Forest/Tree.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/TestRoom.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Other Stuff/Debug_debug.png" type="Texture" id=4]
+
+[node name="Testing Room" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = -199.0
+margin_top = -129.0
+margin_right = 613.0
+margin_bottom = 432.0
+texture = ExtResource( 4 )
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Neth" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 229.011, 71 )
+
+[node name="Tree3" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 366.011, 17 )
+
+[node name="Tree2" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 153.011, 181 )
+
+[node name="Tree4" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 78.0106, 118 )
+
+[node name="Tree" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 417.011, 141 )
+
+[node name="ForestMusicPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true
